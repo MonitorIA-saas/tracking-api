@@ -16,6 +16,10 @@ type Logger interface {
 
 type log struct{}
 
+func NewLogger() *log {
+	return &log{}
+}
+
 func (l *log) Info(message string) {
 	fmt.Printf("[INFO]  %s | %s\n", time.Now().Format("2006-01-02 15:04:05"), message)
 }
